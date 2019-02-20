@@ -9,6 +9,7 @@ import { SantiagoComponent } from './santiago/santiago.component';
 import { BuenosAiresComponent } from './buenos-aires/buenos-aires.component';
 import { LimaComponent } from './lima/lima.component';
 import { SaoPauloComponent } from './sao-paulo/sao-paulo.component';
+import { CountriesComponent } from './countries/countries.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SaoPauloComponent } from './sao-paulo/sao-paulo.component';
     SantiagoComponent,
     BuenosAiresComponent,
     LimaComponent,
-    SaoPauloComponent
+    SaoPauloComponent,
+    CountriesComponent
   ],
   imports: [
     MyMaterialModule,

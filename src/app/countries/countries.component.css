@@ -1,0 +1,9 @@
+.country-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1em;
+}
+.card{
+  width: 45%;
+  margin: 5px;
+}
