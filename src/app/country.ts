@@ -3,4 +3,5 @@ export class Country {
   city: string;
   countryName: string;
   countryIso: string;
+  weatherInfo: any;
 }
