@@ -1,6 +1,14 @@
 <div class="country-container">
-  <mat-card *ngFor="let country of countryList" class="card">
-    <mat-card-title>Weather for: {{country.city}}, {{country.countryName}}</mat-card-title>
-    <mat-card-content>The current weather is: </mat-card-content>
-  </mat-card>
+  <div *ngIf="isLoading">
+    <mat-card>
+      <mat-progress-spinner class="spinner-style" color="primary" mode="indeterminate"></mat-progress-spinner>
+    </mat-card>
+  </div>
+  <div *ngIf="showWeather" class="card-container">
+    <mat-card *ngFor="let c of countryList" class="card">
+      <mat-card-title>Weather for: {{c.city}}, {{c.countryName}}</mat-card-title>
+      <mat-card-content>The current weather is: {{c.weatherInfo.weather[0].description}}</mat-card-content>
+    </mat-card>
+
+  </div>
 </div>
