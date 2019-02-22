@@ -28,7 +28,7 @@ export class CountriesComponent implements OnInit {
     this.theWeather = [];
     this.countryList.map((element) => {
       this.apiCall.getWeather(element.city, element.countryIso)
-        .subscribe((data: {}) => {
+        .subscribe((data: {main,}) => {
           const celciusTemp: number = data.main.temp - 273.15;
           const celciusMin: number = data.main.temp_min - 273.15;
           const celciusMax: number = data.main.temp_max - 273.15;
