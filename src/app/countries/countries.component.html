@@ -6,8 +6,11 @@
   </div>
   <div *ngIf="showWeather" class="card-container">
     <mat-card *ngFor="let c of countryList" class="card">
-      <mat-card-title>Weather for: {{c.city}}, {{c.countryName}}</mat-card-title>
+      <mat-card-title>Weather for: {{c?.city}}, {{c.countryName}}</mat-card-title>
       <mat-card-content>The current weather is: {{c.weatherInfo.weather[0].description}}</mat-card-content>
+      <mat-card-content>With a current temperature of: {{c.weatherInfo.main.temp}}℃</mat-card-content>
+      <mat-card-content>The max is: {{c.weatherInfo.main.temp_max}}℃</mat-card-content>
+      <mat-card-content>and a min of: {{c.weatherInfo.main.temp_min}}℃</mat-card-content>
     </mat-card>
 
   </div>
